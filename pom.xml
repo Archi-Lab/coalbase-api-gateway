@@ -71,7 +71,6 @@
         </executions>
         <configuration>
           <repository>${docker.image.prefix}/${project.artifactId}</repository>
-          <contextDirectory>src/main/docker</contextDirectory>
         </configuration>
       </plugin>
       <plugin>
