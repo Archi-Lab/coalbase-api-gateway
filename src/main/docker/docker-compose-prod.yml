@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   coalbase_api_gateway:
-    image: docker.nexus.archi-lab.io/archilab/coalbase-learning-outcome:${BUILD_ID}
+    image: docker.nexus.archi-lab.io/archilab/coalbase-api-gateway:${BUILD_ID}
     ports:
       - "8080:8080"
     deploy:
