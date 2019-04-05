@@ -60,7 +60,7 @@ pipeline {
             steps {
                 updateGitlabCommitStatus name: "Building", state: "running"
 
-                sh "mvn clean install -Dmaven.test.skip=true"
+                sh "mvn clean install dockerfile:build -Dmaven.test.skip=true"
             }
             post {
                 success {
