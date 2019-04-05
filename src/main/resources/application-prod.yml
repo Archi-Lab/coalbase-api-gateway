@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "https://coalbase.io, coalbase.io,  https://coalbase.archi-lab.io, archi-lab.io"
+            allowedMethods:
+              - GET
+              - POST
+              - PATCH
+              - PUT
+              - DELETE
+              - OPTIONS
+              - HEAD
+      routes:
+        - id: learning-outcomes
+          uri: http://localhost:8080
+          predicates:
+            - Path=/learningOutcomes, /learningOutcomes/{segment}
+        - id: learning-spaces
+          uri: http://localhost:8080
+          predicates:
+            - Path=/learningSpaces, /learningSpaces/{segment}
+        - id: courses
+          uri: http://localhost:8080
+          predicates:
+            - Path=/courses, /courses/{segment}

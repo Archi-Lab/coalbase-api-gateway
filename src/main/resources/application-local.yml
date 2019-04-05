@@ -1,0 +1,31 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PATCH
+              - PUT
+              - DELETE
+              - OPTIONS
+              - HEAD
+      routes:
+        - id: learning-outcomes
+          uri: http://localhost:8080
+          predicates:
+            - Path=/learningOutcomes, /learningOutcomes/{learningOutcomeId}
+        - id: learning-spaces
+          uri: http://localhost:8080
+          predicates:
+            - Path=/learningSpaces, /learningSpaces/{learningSpaceId}, /learningSpaces/{learningSpaceId}/**
+        - id: courses
+          uri: http://localhost:8080
+          predicates:
+            - Path=/courses, /courses/{courseId}, /courses/{courseId}/**

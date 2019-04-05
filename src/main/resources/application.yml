@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active:
+      - local
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans,shutdown"
+      cors:
+        allowed-methods:
+          - GET
