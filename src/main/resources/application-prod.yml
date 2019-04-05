@@ -18,14 +18,14 @@ spring:
               - HEAD
       routes:
         - id: learning-outcomes
-          uri: http://learning-outcome_learning_outcome_ms
+          uri: learning-outcome_learning_outcome_ms
           predicates:
             - Path=/learningOutcomes, /learningOutcomes/{segment}
         - id: learning-spaces
-          uri: http://learning-outcome_learning_outcome_ms
+          uri: learning-outcome_learning_outcome_ms
           predicates:
             - Path=/learningSpaces, /learningSpaces/{segment}
         - id: courses
-          uri: http://learning-outcome_learning_outcome_ms
+          uri: learning-outcome_learning_outcome_ms
           predicates:
             - Path=/courses, /courses/{segment}
