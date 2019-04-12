@@ -1,5 +1,4 @@
 version: '3.4'
-
 services:
   coalbase_api_gateway:
     image: docker.nexus.archi-lab.io/archilab/coalbase-api-gateway
