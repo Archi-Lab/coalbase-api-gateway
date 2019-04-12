@@ -20,7 +20,7 @@ spring:
               - DELETE
               - OPTIONS
               - HEAD
-            allowedHeaders: "authorization"
+            allowedHeaders: "*"
       routes:
         - id: learning-outcomes
           uri: lb://learning-outcome-ms
