@@ -4,6 +4,10 @@ server:
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -18,14 +22,14 @@ spring:
               - HEAD
       routes:
         - id: learning-outcomes
-          uri: http://learning-outcome_learning_outcome_ms
+          uri: lb://learning-outcome-ms
           predicates:
             - Path=/learningOutcomes, /learningOutcomes/{segment}
         - id: learning-spaces
-          uri: http://learning-outcome_learning_outcome_ms
+          uri: lb://learning-outcome-ms
           predicates:
             - Path=/learningSpaces, /learningSpaces/{segment}
         - id: courses
-          uri: http://learning-outcome_learning_outcome_ms
+          uri: lb://learning-outcome-ms
           predicates:
             - Path=/courses, /courses/{segment}
