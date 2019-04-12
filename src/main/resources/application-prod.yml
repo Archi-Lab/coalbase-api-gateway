@@ -11,7 +11,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "coalbase.io"
+            allowedOrigins: "https://coalbase.io"
             allowedMethods:
               - GET
               - POST
