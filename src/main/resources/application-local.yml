@@ -9,20 +9,6 @@ spring:
         locator:
           enabled: true
           lowerCaseServiceId: true
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PATCH
-              - PUT
-              - DELETE
-              - OPTIONS
-              - HEAD
-            allowedHeaders: "*"
-
       routes:
         - id: learning-outcomes
           uri: lb://learning-outcome-ms
