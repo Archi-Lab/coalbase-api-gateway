@@ -35,7 +35,7 @@ spring:
           predicates:
             - Path=/courses, /courses/{segment}
       default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Origin
+        - name: DedupeResponseHeader=Access-Control-Allow-Origin
 # Eureka
 eureka:
   client:
