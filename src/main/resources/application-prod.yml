@@ -34,8 +34,6 @@ spring:
           uri: lb://learning-outcome-ms
           predicates:
             - Path=/courses, /courses/{segment}
-      default-filters:
-        - name: DedupeResponseHeader=Access-Control-Allow-Origin
 # Eureka
 eureka:
   client:
