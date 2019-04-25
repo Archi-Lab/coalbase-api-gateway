@@ -40,6 +40,9 @@ spring:
             - Path=/courses, /courses/{segment}
           filters:
             - AddRequestHeader=X-Forwarded-Proto, https
+      x-forwarded:
+        proto-append: false
+        port-enabled: false
 # Eureka
 eureka:
   client:
