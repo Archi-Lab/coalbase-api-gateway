@@ -30,6 +30,8 @@ spring:
           uri: lb://learning-outcome-ms
           predicates:
             - Path=/learningSpaces, /learningSpaces/{segment}
+          filters:
+            - AddRequestHeader=X-Forwarded-Proto, https
         - id: courses
           uri: lb://learning-outcome-ms
           predicates:
@@ -38,7 +40,6 @@ spring:
         proto-enabled: true
         enabled: true
         proto-append: true
-        for-append: true
 # Eureka
 eureka:
   client:
