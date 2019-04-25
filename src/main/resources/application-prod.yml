@@ -34,6 +34,9 @@ spring:
           uri: lb://learning-outcome-ms
           predicates:
             - Path=/courses, /courses/{segment}
+      x-forwarded:
+        proto-enabled: true
+        enabled: true
 # Eureka
 eureka:
   client:
