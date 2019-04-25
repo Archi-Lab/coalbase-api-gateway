@@ -24,14 +24,23 @@ spring:
             allowedHeaders: "*"
       routes:
         - id: learning-outcomes
-          uri: lb://learning-outcome-ms
+          uri: http://localhost:8080
           predicates:
             - Path=/learningOutcomes, /learningOutcomes/{learningOutcomeId}
         - id: learning-spaces
-          uri: lb://learning-outcome-ms
+          uri: http://localhost:8080
           predicates:
             - Path=/learningSpaces, /learningSpaces/{learningSpaceId}, /learningSpaces/{learningSpaceId}/**
         - id: courses
-          uri: lb://learning-outcome-ms
+          uri: http://localhost:8080
+          filters:
+            - DeDoubleProtoFilterFactory
           predicates:
             - Path=/courses, /courses/{courseId}, /courses/{courseId}/**
+      x-forwarded:
+        proto-enabled: false
+# Eureka
+eureka:
+  client:
+    enabled: false
+

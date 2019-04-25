@@ -27,22 +27,21 @@ spring:
           predicates:
             - Path=/learningOutcomes, /learningOutcomes/{segment}
           filters:
-            - AddRequestHeader=X-Forwarded-Proto, https
+            - DeDoubleProtoFilterFactory
         - id: learning-spaces
           uri: lb://learning-outcome-ms
           predicates:
             - Path=/learningSpaces, /learningSpaces/{segment}
           filters:
-            - AddRequestHeader=X-Forwarded-Proto, https
+            - DeDoubleProtoFilterFactory
         - id: courses
           uri: lb://learning-outcome-ms
           predicates:
             - Path=/courses, /courses/{segment}
           filters:
-            - AddRequestHeader=X-Forwarded-Proto, https
+            - DeDoubleProtoFilterFactory
       x-forwarded:
-        proto-append: false
-        proto-enabled: true
+        proto-enabled: false
 # Eureka
 eureka:
   client:
