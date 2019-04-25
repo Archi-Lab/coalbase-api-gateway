@@ -5,7 +5,14 @@ spring:
   jackson:
     serialization:
       INDENT_OUTPUT: true
-
+  cloud:
+    gateway:
+      forwarded:
+        enabled: false
+      x-forwarded:
+        proto-enabled: true
+        proto-append: true
+        enabled: true
 
 logging:
   level:

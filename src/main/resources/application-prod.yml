@@ -26,22 +26,14 @@ spring:
           uri: lb://learning-outcome-ms
           predicates:
             - Path=/learningOutcomes, /learningOutcomes/{segment}
-          filters:
-            - DeDoubleProtoFilterFactory
         - id: learning-spaces
           uri: lb://learning-outcome-ms
           predicates:
             - Path=/learningSpaces, /learningSpaces/{segment}
-          filters:
-            - DeDoubleProtoFilterFactory
         - id: courses
           uri: lb://learning-outcome-ms
           predicates:
             - Path=/courses, /courses/{segment}
-          filters:
-            - DeDoubleProtoFilterFactory
-      x-forwarded:
-        proto-enabled: false
 # Eureka
 eureka:
   client:

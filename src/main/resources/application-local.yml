@@ -33,12 +33,9 @@ spring:
             - Path=/learningSpaces, /learningSpaces/{learningSpaceId}, /learningSpaces/{learningSpaceId}/**
         - id: courses
           uri: http://localhost:8080
-          filters:
-            - DeDoubleProtoFilterFactory
           predicates:
             - Path=/courses, /courses/{courseId}, /courses/{courseId}/**
-      x-forwarded:
-        proto-enabled: false
+
 # Eureka
 eureka:
   client:
