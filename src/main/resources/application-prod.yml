@@ -37,6 +37,8 @@ spring:
       x-forwarded:
         proto-enabled: true
         enabled: true
+        proto-append: true
+        for-append: true
 # Eureka
 eureka:
   client:
