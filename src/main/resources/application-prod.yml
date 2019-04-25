@@ -42,7 +42,7 @@ spring:
             - AddRequestHeader=X-Forwarded-Proto, https
       x-forwarded:
         proto-append: false
-        port-enabled: false
+        proto-enabled: false
 # Eureka
 eureka:
   client:
