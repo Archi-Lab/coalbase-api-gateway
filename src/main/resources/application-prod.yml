@@ -25,15 +25,15 @@ spring:
         - id: learning-outcomes
           uri: lb://learning-outcome-ms
           predicates:
-            - Path=/learningOutcomes, /learningOutcomes/{segment}
+            - Path=/learningOutcomes, /learningOutcomes/**
         - id: learning-spaces
           uri: lb://learning-outcome-ms
           predicates:
-            - Path=/learningSpaces, /learningSpaces/{segment}
+            - Path=/learningSpaces, /learningSpaces/**
         - id: courses
           uri: lb://learning-outcome-ms
           predicates:
-            - Path=/courses, /courses/{segment}
+            - Path=/courses, /courses/**
 # Eureka
 eureka:
   client:

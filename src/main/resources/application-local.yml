@@ -26,15 +26,15 @@ spring:
         - id: learning-outcomes
           uri: http://localhost:8080
           predicates:
-            - Path=/learningOutcomes, /learningOutcomes/{learningOutcomeId}
+            - Path=/learningOutcomes, /learningOutcomes/**
         - id: learning-spaces
           uri: http://localhost:8080
           predicates:
-            - Path=/learningSpaces, /learningSpaces/{learningSpaceId}, /learningSpaces/{learningSpaceId}/**
+            - Path=/learningSpaces, /learningSpaces/**
         - id: courses
           uri: http://localhost:8080
           predicates:
-            - Path=/courses, /courses/{courseId}, /courses/{courseId}/**
+            - Path=/courses, /courses/**
 
 # Eureka
 eureka:
