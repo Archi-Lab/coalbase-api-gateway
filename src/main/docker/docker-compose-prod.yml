@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  coalbase_api_gateway:
+  springcloud-gateway:
     image: docker.nexus.archi-lab.io/archilab/coalbase-api-gateway:${BUILD_ID}
     deploy:
       replicas: 2
