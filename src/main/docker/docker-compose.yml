@@ -6,7 +6,7 @@ services:
       - "8080:8080"
     environment:
       - TZ=Europe/Berlin
-      - JAVA_OPTS=-Xms128m -Xmx256m
+      - JAVA_OPTS="-Xms128m -Xmx256m"
     networks:
       - coalbase_backend
 networks:
