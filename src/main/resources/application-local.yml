@@ -34,6 +34,10 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/courses, /courses/**
+        - id: predefined-exam-forms
+          uri: http://localhost:8081
+          predicates:
+            - Path=/predefinedExamForms, /predefinedExamForms/**
 
 # Eureka
 eureka:
