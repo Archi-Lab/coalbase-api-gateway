@@ -34,6 +34,10 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/courses, /courses/**
+        - id: web-links
+          uri: http://localhost:8082
+          predicates:
+            - Path=/webLinkResources, /webLinkResources/**
 
 # Eureka
 eureka:
