@@ -38,6 +38,10 @@ spring:
           uri: http://localhost:8082
           predicates:
             - Path=/webLinkResources, /webLinkResources/**
+        - id: predefined-exam-forms
+          uri: http://localhost:8081
+          predicates:
+            - Path=/predefinedExamForms, /predefinedExamForms/**
 
 # Eureka
 eureka:
