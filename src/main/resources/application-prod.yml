@@ -42,6 +42,10 @@ spring:
           uri: lb://learning-outcome-ms
           predicates:
             - Path=/predefinedExamForms, /predefinedExamForms/**
+        - id: comments
+          uri: lb://comment-ms
+          predicates:
+            - Path=/comments, /comments/**
 # Eureka
 eureka:
   client:
