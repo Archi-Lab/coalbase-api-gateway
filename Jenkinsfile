@@ -82,6 +82,7 @@ pipeline {
                     docker.withRegistry('https://docker.nexus.archi-lab.io//', 'archilab-nexus-jenkins-user') {
                         sh "docker push docker.nexus.archi-lab.io/archilab/coalbase-api-gateway-dev"
                     }
+				}
             }
             post {
                 success {
