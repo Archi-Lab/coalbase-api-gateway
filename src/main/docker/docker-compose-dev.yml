@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   springcloud-gateway:
-    image: docker.nexus.archi-lab.io/archilab/coalbase-api-gateway-dev:${BUILD_ID}
+    image: docker.nexus.archi-lab.io/archilab/coalbase-api-gateway-dev
     ports:
       - "8080:8080"
     environment:
