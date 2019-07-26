@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PATCH
+              - PUT
+              - DELETE
+              - OPTIONS
+              - HEAD
+            allowedHeaders: "*"
+      routes:
+        - id: learning-outcomes
+          uri: lb://learning-outcome-ms
+          predicates:
+            - Path=/learningOutcomes, /learningOutcomes/**
+        - id: learning-spaces
+          uri: lb://learning-outcome-ms
+          predicates:
+            - Path=/learningSpaces, /learningSpaces/**
+        - id: courses
+          uri: lb://learning-outcome-ms
+          predicates:
+            - Path=/courses, /courses/**
+        - id: web-links
+          uri: lb://resource-ms
+          predicates:
+            - Path=/webLinkResources, /webLinkResources/**
+        - id: predefined-exam-forms
+          uri: lb://learning-outcome-ms
+          predicates:
+            - Path=/predefinedExamForms, /predefinedExamForms/**
+# Eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8761/eureka/
