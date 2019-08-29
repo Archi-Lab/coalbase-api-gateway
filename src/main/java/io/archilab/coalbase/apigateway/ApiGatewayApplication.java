@@ -1,4 +1,4 @@
-package de.archilab.coalbase.apigateway;
+package io.archilab.coalbase.apigateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

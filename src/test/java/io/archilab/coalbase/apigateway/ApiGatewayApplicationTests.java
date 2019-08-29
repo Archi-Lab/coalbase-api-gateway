@@ -1,4 +1,4 @@
-package de.archilab.coalbase.apigateway;
+package io.archilab.coalbase.apigateway;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -8,7 +8,7 @@
     <version>2.1.4.RELEASE</version>
   </parent>
 
-  <groupId>de.archilab.coalbase</groupId>
+  <groupId>io.archilab.coalbase</groupId>
   <artifactId>coalbase-api-gateway</artifactId>
   <version>${revision}${changelist}</version>
 
