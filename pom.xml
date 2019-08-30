@@ -12,7 +12,7 @@
   <artifactId>coalbase-api-gateway</artifactId>
   <version>${revision}${changelist}</version>
 
-  <name>api-gateway</name>
+  <name>coalbase-api-gateway</name>
   <description>API-Gateway for the coalbase backend</description>
 
   <properties>
