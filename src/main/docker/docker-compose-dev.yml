@@ -1,11 +1,12 @@
 version: '3.4'
 services:
   springcloud-gateway:
-    image: docker.nexus.archi-lab.io/archilab/coalbase-api-gateway-dev
+    image: docker.nexus.archi-lab.io/archilab/coalbase-api-gateway
     ports:
       - "8080:8080"
     environment:
       - TZ=Europe/Berlin
+      - SPRING_PROFILES_ACTIVE=dev
     networks:
       - coalbase_backend
 networks:
